@@ -6,11 +6,20 @@ import DisplayDataRoutes from "./Routes/DisplayData.js";
 import OrderDataRoutes from "./Routes/OrderData.js";
 import MyOrderDataRoutes from "./Routes/OrderData.js";
 import dotenv from "dotenv"; // Import dotenv
+import cors from "cors";
 
 dotenv.config(); // Load environment variables
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// // Enable CORS for your frontend URL
+// app.use(
+//   cors({
+//     origin: "https://food-delivery-app-vltz.vercel.app", // Replace with your frontend URL
+//     credentials: true, // Optional: include this if you need to support credentials
+//   })
+// );
 
 // Connect to MongoDB
 connectToMongoDB();
