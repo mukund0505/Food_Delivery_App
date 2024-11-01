@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Badge } from "react-bootstrap";
 import Modal from "../Modal.js";
-import Cart from "../screens/Cart";
+import Cart from "../screens/Cart.js";
 import { useCart } from "./ContextReducer.js";
 
 const Navbar = () => {

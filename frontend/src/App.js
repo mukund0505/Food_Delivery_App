@@ -1,11 +1,11 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./screens/Login";
-import Home from "./screens/Home";
+import Login from "./screens/Login.js";
+import Home from "./screens/Home.js";
 
 import "../node_modules/bootstrap-dark-5/dist/css/bootstrap-dark.min.css";
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+import "bootstrap/dist/js/bootstrap.bundle.js";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Signup from "./screens/Signup.js";
 import CartProvider from "./components/ContextReducer.js";
 import MyOrder from "./screens/MyOrder.js";
