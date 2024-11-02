@@ -14,7 +14,7 @@ const MyOrder = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/myorderData", {
+      const response = await fetch(`https://food-delivery-app-eim5.onrender.com/api/myorderData`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
