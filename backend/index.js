@@ -13,36 +13,25 @@ dotenv.config(); // Load environment variables
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// // Enable CORS for your frontend URL
+// Enable CORS for your frontend URL
 // app.use(
 //   cors({
-//     origin: "https://food-delivery-app-vltz.vercel.app", // Replace with your frontend URL
-//     credentials: true, // Optional: include this if you need to support credentials
+//     origin: "https://localhost:3000", // Your frontend URL
+//     credentials: true,
 //   })
 // );
-
-// Enable CORS for your frontend URL
-app.use(
-  cors({
-    origin: "https://zippy-biscochitos-6e9924.netlify.app", // Your frontend URL
-    credentials: true,
-  })
-);
 
 // Connect to MongoDB
 connectToMongoDB();
 
-// app.use((req, res, next) => {
-//   res.setHeader(
-//     "Access-Control-Allow-Origin",
-//     "https://zippy-biscochitos-6e9924.netlify.app"
-//   );
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With, Content-Type, Accept"
-//   );
-//   next();
-// });
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
