@@ -14,7 +14,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:5000/api/createuser", {
+    const response = await fetch(`https://food-delivery-app-ydua.onrender.com/api/createuser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

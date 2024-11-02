@@ -27,7 +27,7 @@ export default function Cart() {
     }
 
     try {
-      let response = await fetch("http://localhost:5000/api/orderData", {
+      let response = await fetch(`https://food-delivery-app-ydua.onrender.com/api/orderData`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
